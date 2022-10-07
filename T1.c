@@ -2,7 +2,7 @@
 
 void tache1()
 {
-        ////////////////////////////
+        
         
     unsigned char i;
 
