@@ -2,7 +2,7 @@
 
 void tache1()
 {
-        
+        ////////////////////////////
         
     unsigned char i;
 
@@ -74,7 +74,7 @@ void tache1()
         if (SIEGE==1) //S'il n'y a personne
         {
             draw_char('0');          
-            if(vitesse == 0)//Si le véhicule est à l'arrêt
+            if(vitesse == 0)//Si le vÃ©hicule est Ã  l'arrÃªt
             {
                 goto_lico(7,0);
                 draw_string("((!))"); 
@@ -101,13 +101,13 @@ void tache1()
             {
                 goto_lico(0,0);
                 draw_string("Marche:");
-                draw_string("_N_"); //on affiche rien car il y'a un frein de prévu
+                draw_string("_N_"); //on affiche rien car il y'a un frein de prÃ©vu
             }
             else if (MARCHE_ARRIERE==0)
             {    
                 goto_lico(0,0);
                 draw_string("Marche:");
-                draw_string("_N_");//on affiche rien car il y'a un frein de prévu
+                draw_string("_N_");//on affiche rien car il y'a un frein de prÃ©vu
             }
             else
             {
@@ -119,20 +119,20 @@ void tache1()
         else //S'il y'a quelque'un
         {
             draw_char('1');
-            if(FREIN_A_MAIN==0) //Si le frein à main est désactivé
+            if(FREIN_A_MAIN==0) //Si le frein Ã  main est dÃ©sactivÃ©
             {
                 
                  if (MARCHE_AVANT==0) 
                 {
                     goto_lico(0,0);
                     draw_string("Marche:");
-                    draw_string("AV"); //on affiche rien car il y'a un frein de prévu
+                    draw_string("AV"); //on affiche rien car il y'a un frein de prÃ©vu
                 }
                 else if (MARCHE_ARRIERE==0)
                 {    
                     goto_lico(0,0);
                     draw_string("Marche:");
-                    draw_string("AR");//on affiche rien car il y'a un frein de prévu
+                    draw_string("AR");//on affiche rien car il y'a un frein de prÃ©vu
                 }
                 else
                 {
@@ -153,13 +153,13 @@ void tache1()
             {
                 goto_lico(0,0);
                 draw_string("Marche:");
-                draw_string("AV"); //on affiche rien car il y'a un frein de prévu
+                draw_string("AV"); //on affiche rien car il y'a un frein de prÃ©vu
             }
             else if (MARCHE_ARRIERE==0)
             {    
                 goto_lico(0,0);
                 draw_string("Marche:");
-                draw_string("AR");//on affiche rien car il y'a un frein de prévu
+                draw_string("AR");//on affiche rien car il y'a un frein de prÃ©vu
             }
             else
             {
@@ -251,9 +251,9 @@ void tache1()
         draw_string("Y-Joystick:");
         draw_hex8(lecture_8bit_analogique(JOYSTICK_Y));
         
-        //goto_lico(11,0); //ajout de test clé
-        //if (n_octet_badge == 1) draw_string("bon badge"); //ajout de test clé
-        //else //ajout de test clé
+        //goto_lico(11,0); //ajout de test clÃ©
+        //if (n_octet_badge == 1) draw_string("bon badge"); //ajout de test clÃ©
+        //else //ajout de test clÃ©
         //{
             //goto_lico(11,0);
             //draw_string("ARRET : Pas ou mauvais badge");
