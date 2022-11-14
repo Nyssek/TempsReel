@@ -17,8 +17,8 @@
 void interrupt fonction_d_interruption()
 {
 // Sauvegarde de registres sensibles (ils sont modifiés au cours du changement de tache)
-    STATUS_TEMPORAIRE=STATUS; W_TEMPORAIRE=WREG; BSR_TEMPORAIRE=BSR;
-    FSR0H_TEMPORAIRE=FSR0H; FSR0L_TEMPORAIRE=FSR0L;
+    STATUS_TEMPORAIRE=STATUS; W_TEMPORAIRE=WREG; BSR_TEMPORAIRE=BSR;//choix de bank
+    FSR0H_TEMPORAIRE=FSR0H; FSR0L_TEMPORAIRE=FSR0L; //fsr pointeur de l'adresse 
 
 // INTERRUPTION TIMER0 UITLISEE PAR L'ORDONNANCEUR
     if(T0IE && T0IF)
@@ -140,7 +140,7 @@ void initialisation_du_systeme()
     queue[2]=TACHE3;
     queue[3]=TACHE4;
     queue[4]=TACHE5;
-    queue[5]=TACHE6;
+   
 
     pointeur_de_tache=NOMBRE_DE_TACHES-1;
     tache_active=queue[pointeur_de_tache];

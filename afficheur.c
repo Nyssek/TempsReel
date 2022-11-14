@@ -239,6 +239,38 @@ void draw_char(unsigned char dccar)
     while(d1command(dccar,0xC0)==0) Nop();
 }
 
+void draw_decimal_100 (unsigned char val)
+{
+    unsigned int Centaine = val/100;
+    val = val - (Centaine * 100);
+    unsigned int Dizaine = val/10;
+    val = val - (Dizaine * 10);
+    unsigned int Unite = val;
+    
+    while(d1command(Centaine+0x10,0xC0)==0) Nop();
+    while(d1command(Dizaine+0x10,0xC0)==0) Nop();
+    while(d1command(Unite+0x10,0xC0)==0) Nop();
+}
+
+void draw_decimal_10 (unsigned char val)
+{
+
+    unsigned int Dizaine = val/10;
+    val = val - (Dizaine * 10);
+    unsigned int Unite = val;
+    
+    
+    while(d1command(Dizaine+0x10,0xC0)==0) Nop();
+    while(d1command(Unite+0x10,0xC0)==0) Nop();
+}
+
+void draw_decimal_1 (unsigned char val)
+{
+    while(d1command(val+0x10,0xC0)==0) Nop();
+}
+
+
+
 
 void draw_string(unsigned char * tableau)
 {
@@ -357,4 +389,15 @@ void plot0(unsigned char x, unsigned char y)
         default:break;
     }
 
+}
+
+void ClearLcd()
+{
+    unsigned char i;
+    for(i=1;i<18;i++)
+        {
+        goto_lico(i,0);
+        draw_string("                                            ");
+        }
+    goto_lico(0,0);
 }

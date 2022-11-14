@@ -21,11 +21,16 @@ extern "C" {
 // Variables globales semaphores
     unsigned char Val_sem_cna;
     unsigned char Val_sem_rxtx;
+    
+// Variables globales
+    unsigned char ChocFlag=0;
 
     // Prototypes
     void Init(unsigned char sem);
-    void P(unsigned char sem); //reentrant void P(unsigned char sem);
-    void V(unsigned char sem); //reentrant void V(unsigned char sem);
+    //reentrant 
+    void P(unsigned char sem);
+    //reentrant 
+    void V(unsigned char sem);
 
 
 #ifdef	__cplusplus

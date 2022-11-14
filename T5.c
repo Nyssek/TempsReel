@@ -18,7 +18,7 @@ void tache5()
         //while (PIR1bits.TX1IF==0);   TXREG1='c';while (TXSTA1bits.TRMT==0);
        // while (PIR1bits.TX1IF==0);   TXREG1='h';while (TXSTA1bits.TRMT==0);
         //while (PIR1bits.TX1IF==0);   TXREG1='e';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='5';while (TXSTA1bits.TRMT==0);
+        while (PIR1bits.TX1IF==0);   TXREG1='e';while (TXSTA1bits.TRMT==0);
         
         //while (PIR1bits.TX1IF==0);   TXREG1='e';while (TXSTA1bits.TRMT==0);
         //while (PIR1bits.TX1IF==0);   TXREG1='n';while (TXSTA1bits.TRMT==0);
@@ -30,9 +30,6 @@ void tache5()
         //while (PIR1bits.TX1IF==0);   TXREG1='s';while (TXSTA1bits.TRMT==0);
         //RXTX_libre=1;
         //V(SEM_RXTX);
-        for (a=0;a<65000;a++)
-            ;
-        for (a=0;a<65000;a++)
-            ;
+ 
     }
 }

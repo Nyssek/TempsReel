@@ -1,7 +1,5 @@
 #include "T6.h"
 
-//void id_clef(unsigned char *id_lecture);
-
 void tache6()
 {
     unsigned char n;    
@@ -13,7 +11,7 @@ void tache6()
     while(1)
     {
         
-        while (PIR1bits.TX1IF==0);   TXREG1='6';while (TXSTA1bits.TRMT==0);
+        while (PIR1bits.TX1IF==0);   TXREG1='f';while (TXSTA1bits.TRMT==0);
         //P(SEM_RXTX);
         //while(RXTX_libre==0);
         //RXTX_libre=0;
@@ -43,21 +41,13 @@ void tache6()
             }
             else
             {
-                n_octet_badge=1; 
+                n_octet_badge=0;
             }
         }
         else
         {
-            n_octet_badge=0; 
+            n_octet_badge=0;
         }
-        
-        
-    }
-    
-}
 
-//void id_clef(unsigned char *id_lecture)
-//{
-  // goto_lico(10,0);
-  // unsigned char *id_lecture = &badge;
-//}
+    }
+}

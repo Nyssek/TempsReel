@@ -15,6 +15,7 @@ void tache2()
     
     while(1)
     {
+        
         //P(SEM_RXTX);
         //while(RXTX_libre==0);
         //RXTX_libre=0;
@@ -23,7 +24,7 @@ void tache2()
         //while (PIR1bits.TX1IF==0);   TXREG1='C';while (TXSTA1bits.TRMT==0);
         //while (PIR1bits.TX1IF==0);   TXREG1='H';while (TXSTA1bits.TRMT==0);
         //while (PIR1bits.TX1IF==0);   TXREG1='E';while (TXSTA1bits.TRMT==0);
-        while (PIR1bits.TX1IF==0);   TXREG1='2';while (TXSTA1bits.TRMT==0);
+        while (PIR1bits.TX1IF==0);   TXREG1='b';while (TXSTA1bits.TRMT==0);
         
         //while (PIR1bits.TX1IF==0);   TXREG1='E';while (TXSTA1bits.TRMT==0);
         //while (PIR1bits.TX1IF==0);   TXREG1='N';while (TXSTA1bits.TRMT==0);

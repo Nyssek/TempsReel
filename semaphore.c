@@ -17,15 +17,16 @@ void Init(unsigned char sem)
     }
 }
 
-void P(unsigned char sem) //reentrant void P(unsigned char sem)
+//reentrant 
+void P(unsigned char sem)
 {
     switch(sem)
     {
-        case SEM_CAN:
+        case SEM_CAN: // SEM_CAN = 1
             while (Val_sem_cna<1)  // Tant que le cna est occupé
                 ;                   // On attend
                 Val_sem_cna=0; // Dès qu'il est libre, on le réserve
-        case SEM_RXTX:
+        case SEM_RXTX: // SEM_RXTX = 2
             while (Val_sem_rxtx<1)  // Tant que la liaison série est occupé
                 ;                   // On attend
                 Val_sem_cna=0; // Dès qu'elle est libre, on la réserve
@@ -34,7 +35,8 @@ void P(unsigned char sem) //reentrant void P(unsigned char sem)
     }
 }
 
-void V(unsigned char sem) //reentrant void V(unsigned char sem)
+//reentrant 
+void V(unsigned char sem)
 {
     switch(sem)
     {

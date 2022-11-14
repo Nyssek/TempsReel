@@ -41,10 +41,14 @@ extern "C" {
     void draw_char(unsigned char dccar);
     void draw_string(unsigned char * tableau);
     void draw_hex8(unsigned char octet);
+    void draw_decimal_100 (unsigned char val);
+    void draw_decimal_10 (unsigned char val);
+    void draw_decimal_1 (unsigned char val);
     void goto_lico(unsigned char ligne, unsigned char colonne);
     void clear_text();
     void clear_graphics();
     void clear_cgram();
+    void ClearLcd();
     void plot1(unsigned char x, unsigned char y);
     void plot0(unsigned char x, unsigned char y);
 

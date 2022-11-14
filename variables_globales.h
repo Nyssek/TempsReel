@@ -46,7 +46,7 @@ unsigned char vitesse              @ 0x73;
 unsigned char batterie             @ 0x74;
 
 unsigned char badge[10]            @ 0x75;
-unsigned char n_octet_badge        @ 0x7F; //unsigned char n_octet_badge        @ 0x7F;
+unsigned char n_octet_badge        @ 0x7F;
 
 unsigned char RXTX_libre        @ 0x80;
 

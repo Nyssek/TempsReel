@@ -6,7 +6,7 @@ unsigned char lecture_normale(unsigned char * stid_id)
 {
     unsigned char temps_attente,n_octet,n_bit,octet;
 
-    STID_SENS_DATA=1;
+    STID_SENS_DATA=1;//DATA en entrée
     STID_READ=0;
     STID_CLOCK=0;
     stid_delai_us(100);
@@ -16,12 +16,12 @@ unsigned char lecture_normale(unsigned char * stid_id)
     {
         stid_delai_us(1000);
         temps_attente++;
-        if (STID_CODE==1) 
+        if (STID_CODE==1)
             temps_attente=65;
     }
     while(temps_attente<65);
 
-    if (STID_CODE==1) 
+    if (STID_CODE==1)
     {
         n_octet=0;
         n_bit=0;
@@ -42,7 +42,7 @@ unsigned char lecture_normale(unsigned char * stid_id)
             stid_id[n_octet]=octet;
             n_octet++;
         }
-        while(STID_CODE==1); 
+        while(STID_CODE==1);
 
         return n_octet;
     }

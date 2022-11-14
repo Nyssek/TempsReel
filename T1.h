@@ -12,9 +12,8 @@
 extern "C" {
 #endif
 
-#include "main.h" 
+#include "main.h"
 void tache1();
-
 
 #ifdef	__cplusplus
 }

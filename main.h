@@ -136,7 +136,11 @@ extern "C" {
 #define     TEMPERATURE_HUILE   3
 #define     JOYSTICK_X          10
 #define     JOYSTICK_Y          11
-
+    
+// Variable globale
+    
+char Temp_Eau;
+char Temp_Huile;
 
 // Prototypes
     void initialisation_des_ports();
